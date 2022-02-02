@@ -2640,8 +2640,8 @@ sub print_grandtotals {
     push(@col_headers,"${_}s");
   }
 
-  my $txt_format1 = "  %-16s %9s     %6d    %6s $sender_txt_format";
-  my $txt_format2 = "  %6d %4.1f%% %6d %4.1f%%",
+  my $txt_format1 = "  %-12s %9s   %8d  %8s $sender_txt_format";
+  my $txt_format2 = "  %8d %4.1f%% %8d %4.1f%%",
   my $htm_format1 = "<tr><td>%s</td><td align=\"right\">%s</td><td align=\"right\">%s</td><td align=\"right\">%s</td>$sender_html_format";
   my $htm_format2 = "<td align=\"right\">%d</td><td align=\"right\">%4.1f%%</td><td align=\"right\">%d</td><td align=\"right\">%4.1f%%</td>";
 
@@ -2650,8 +2650,8 @@ sub print_grandtotals {
     print $txt_fh "\n";
     print $txt_fh "Grand total summary\n";
     print $txt_fh "-------------------\n";
-    print $txt_fh "                                              $sender_spaces           At least one address\n";
-    print $txt_fh "  TOTAL               Volume   Messages Addresses $sender_txt_header      Delayed       Failed\n";
+    print $txt_fh "                                              $sender_spaces         At least one address\n";
+    print $txt_fh "  TOTAL           Volume   Messages Addresses $sender_txt_header        Delayed         Failed\n";
   }
   if ($htm_fh) {
     print $htm_fh "<a name=\"Grandtotal\"></a>\n";
